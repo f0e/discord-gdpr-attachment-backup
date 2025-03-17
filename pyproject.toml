@@ -1,0 +1,16 @@
+[project]
+name = "discord-deletion-tool"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = ["click>=8.1.8", "requests>=2.32.3", "rich>=13.9.4"]
+
+[tool.ruff]
+lint.extend-select = ["I"] # enable import sorting
+
+[tool.mypy]
+check_untyped_defs = true
+
+[dependency-groups]
+dev = ["mypy>=1.15.0", "pre-commit>=4.1.0", "ruff>=0.11.0"]
