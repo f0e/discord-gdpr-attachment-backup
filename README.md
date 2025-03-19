@@ -20,7 +20,7 @@ A CLI tool to work with a Discord GDPR request `messages.csv` (for example, gene
 The tool offers multiple commands through a CLI interface:
 
 ```sh
-python script.py [COMMAND] [OPTIONS]
+python -m src.cli [COMMAND] [OPTIONS]
 ```
 
 ### commands
@@ -30,7 +30,7 @@ python script.py [COMMAND] [OPTIONS]
 Downloads attachments from messages in your Discord data export.
 
 ```sh
-python script.py download-attachments -i <path_to_messages.csv> -e <path_to_discord_export> -o <output_directory>
+python -m src.cli download-attachments -i <path_to_messages.csv> -e <path_to_discord_export> -o <output_directory>
 ```
 
 ##### arguments:
@@ -42,7 +42,7 @@ python script.py download-attachments -i <path_to_messages.csv> -e <path_to_disc
 ##### example:
 
 ```sh
-python script.py download-attachments -i ./data/messages.csv -e ./data/discord_export -o ./output
+python -m src.cli download-attachments -i ./data/messages.csv -e ./data/discord_export -o ./output
 ```
 
 #### date cutoff
@@ -50,7 +50,7 @@ python script.py download-attachments -i ./data/messages.csv -e ./data/discord_e
 Removes messages with timestamps after a specified date from the messages.csv file.
 
 ```sh
-python script.py date-cutoff -i <path_to_messages.csv> -e <path_to_discord_export> -d <cutoff_date> -o <output_path>
+python -m src.cli date-cutoff -i <path_to_messages.csv> -e <path_to_discord_export> -d <cutoff_date> -o <output_path>
 ```
 
 ##### arguments:
@@ -63,5 +63,5 @@ python script.py date-cutoff -i <path_to_messages.csv> -e <path_to_discord_expor
 ##### example:
 
 ```sh
-python script.py date-cutoff -i ./data/messages.csv -e ./data/discord_export -d 2023-01-01 -o ./filtered_messages.csv
+python -m src.cli date-cutoff -i ./data/messages.csv -e ./data/discord_export -d 2023-01-01 -o ./filtered_messages.csv
 ```
